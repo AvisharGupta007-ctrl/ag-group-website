@@ -4,60 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AG Group | Women Fancy Clothing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fff7fb;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
       color: #333;
     }
     header {
-      background: linear-gradient(90deg, #e91e63, #ff80ab);
-      color: white;
-      padding: 20px;
+      background: linear-gradient(90deg, #c2185b, #f06292);
+      color: #fff;
+      padding: 25px 10px;
       text-align: center;
     }
+    header h1 { margin: 0; font-size: 40px; }
+    header p { margin: 5px 0 0; font-size: 16px; }
+
     nav {
       display: flex;
       justify-content: center;
-      gap: 20px;
-      background-color: #f8bbd0;
-      padding: 10px 0;
+      gap: 30px;
+      background-color: #fce4ec;
+      padding: 12px 0;
     }
     nav a {
       text-decoration: none;
       color: #880e4f;
-      font-weight: bold;
+      font-weight: 600;
     }
+
     .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background: #fff7fb;
+    }
+    .hero h2 { font-size: 34px; margin-bottom: 10px; }
+    .hero p { font-size: 18px; color: #555; }
+
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      margin: 40px 0 20px;
+      color: #c2185b;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      padding: 20px 40px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-8px); }
+    .card h3 { color: #e91e63; margin-bottom: 10px; }
+    .card p { color: #666; font-size: 15px; }
+
+    .about {
+      padding: 50px 20px;
+      background-color: #fce4ec;
+      text-align: center;
+    }
+    .about p { max-width: 800px; margin: auto; font-size: 16px; }
+
+    .cta {
+      background: linear-gradient(90deg, #e91e63, #f48fb1);
+      color: white;
       text-align: center;
       padding: 40px 20px;
     }
-    .hero h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 20px;
-      text-align: center;
-    }
-    .card h3 {
+    .cta a {
+      display: inline-block;
+      margin-top: 15px;
+      background: #fff;
       color: #e91e63;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
     }
+
     footer {
-      background-color: #f8bbd0;
+      background-color: #880e4f;
+      color: #fff;
       text-align: center;
-      padding: 15px;
-      margin-top: 30px;
+      padding: 18px;
       font-size: 14px;
     }
   </style>
@@ -66,42 +106,56 @@
 
   <header>
     <h1>AG Group</h1>
-    <p>Women Fancy Clothing (Age 12 to 50)</p>
+    <p>Premium Women Fancy Clothing (Age 12–50)</p>
   </header>
 
   <nav>
     <a href="#">Home</a>
     <a href="#">Collections</a>
-    <a href="#">About Us</a>
+    <a href="#">About</a>
     <a href="#">Contact</a>
   </nav>
 
   <section class="hero">
-    <h1>Elegant • Trendy • Comfortable</h1>
-    <p>Fashion for Girls & Women – Teenagers to Adults</p>
+    <h2>Style That Defines Every Age</h2>
+    <p>Elegant • Trendy • Comfortable Fashion for Every Woman</p>
   </section>
 
+  <h2 class="section-title">Our Collections</h2>
   <section class="categories">
     <div class="card">
-      <h3>Teen Collection (12–18)</h3>
-      <p>Trendy dresses, tops & casual wear</p>
+      <h3>Teen Fashion (12–18)</h3>
+      <p>Trendy tops, dresses & casual styles for young girls.</p>
     </div>
     <div class="card">
       <h3>Young Women (18–30)</h3>
-      <p>Party wear, western & fusion outfits</p>
+      <p>Party wear, western outfits & fusion fashion.</p>
     </div>
     <div class="card">
-      <h3>Women (30–40)</h3>
-      <p>Elegant ethnic, office & daily wear</p>
+      <h3>Elegant Women (30–40)</h3>
+      <p>Office wear, ethnic elegance & daily comfort.</p>
     </div>
     <div class="card">
-      <h3>Women (40–50)</h3>
-      <p>Classic sarees, suits & comfort fashion</p>
+      <h3>Classic Women (40–50)</h3>
+      <p>Sarees, suits & timeless graceful fashion.</p>
     </div>
   </section>
 
+  <section class="about">
+    <h2 class="section-title">About AG Group</h2>
+    <p>
+      AG Group is dedicated to bringing premium-quality women’s fancy clothing that blends comfort with modern fashion. Our collections are carefully curated to suit every age group, lifestyle, and occasion.
+    </p>
+  </section>
+
+  <section class="cta">
+    <h2>Start Your Fashion Journey With Us</h2>
+    <p>For orders & enquiries, connect with AG Group today.</p>
+    <a href="#">Contact Us</a>
+  </section>
+
   <footer>
-    <p>© 2026 AG Group | Women Fancy Clothing</p>
+    <p>© 2026 AG Group | All Rights Reserved</p>
   </footer>
 
 </body>
